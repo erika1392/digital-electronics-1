@@ -1,4 +1,4 @@
-1. Equations of all three versions of logic function f(c,b,a):
+1. Equations of all three versions of logic function f(c,b,a): nope
 
    ![Logic function](images/equations.png)
 
