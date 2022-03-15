@@ -1,8 +1,9 @@
-# Lab 4: YOUR_FIRSTNAME LASTNAME
+# Lab 4: Erika Gočiková
 
 ### Seven-segment display decoder
 
 1. Listing of VHDL stimulus process from testbench file (`tb_hex_7seg.vhd`) with asserts. Verify all input combinations. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
+  ```vhdl
      p_stimulus : process
     begin
         report "Stimulus process started" severity note;
@@ -80,26 +81,26 @@
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure]()
+   ![image](https://user-images.githubusercontent.com/99815316/158438224-80c800ea-728d-4b8a-ab8e-660e2f1572fd.png)
+
 
 ### LED(7:4) indicators
 
 1. Listing of LEDs(7:4) part of VHDL architecture from source file `top.vhd`. Try to write logic functions as simple as possible. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
-   ```vhdl
+     ```vhdl
    --------------------------------------------------------------------
    -- Experiments on your own: LED(7:4) indicators
 
    -- Turn LED(4) on if input value is equal to 0, ie "0000"
-   -- LED(4) <= `0` when WRITE YOUR CODE HERE
+   -- LED(4) <= `1` when (SW = "0000") ELSE '0';
 
    -- Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
-   -- LED(5) <= WRITE YOUR CODE HERE
+   -- LED(5) <= '1' when (SW > "1001") else '0';
 
    -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
-   -- LED(6) <= WRITE YOUR CODE HERE
+   -- LED(6) <= '1' when (SW(0) = "1" ) else '0';
 
    -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
-   -- LED(7) <= WRITE YOUR CODE HERE
-   ```
+   -- LED(7) <= '1' when (SW = "0001") or (SW = "0010") or (SW = "0100") or (SW = "1000") else '0'; 
 
